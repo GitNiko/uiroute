@@ -3,12 +3,22 @@
 <script src="../lib/angular/angular.js"></script>
 <script src="../lib/angular-ui-router/release/angular-ui-router.js"></script>
 <script src="index.js"></script>
-<link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/css/bootstrap.min.css" rel="stylesheet">
+<script src="home.js"></script>
+<link href="../lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
 </head>
 <body>
-  <div ui-view="viewA"></div>
-  <div ui-view="viewB"></div>
+  <!-- navibar -->
+  <div>
+    <a ui-sref="home">home</a><span>|</span>
+    <a ui-sref="setting">setting</a><span>|</span>
+    <a ui-sref="search">search</a><span>|</span>
+  </div>
+  <hr/>
+  <div ui-view="main"></div>
+<!--   <div ui-view="setting"></div>
+  <div ui-view="search"></div> -->
+  <!-- <div ui-view="viewB"></div>
   <button ui-sref="route1">Route 1</button>
-  <button ui-sref="route2">Route 2</button>
+  <button ui-sref="route2">Route 2</button> -->
 </body>
 </html>
