@@ -1,5 +1,5 @@
-var momo = angular.module('main.home', ['ui.router']);
-momo.config( ['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
+angular.module('main.home', ['ui.router'])
+.config( ['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
   var start = "asdasd";
   $stateProvider
     .state('home.apps',{
