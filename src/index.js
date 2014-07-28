@@ -8,7 +8,7 @@ main.config(function($stateProvider, $urlRouterProvider) {
       url: "",
       // views!!!
       views: {
-        "main": { templateUrl: '../template/home.html' },
+        "mains": { templateUrl: '../template/home.html' },
       }
     })
     // .state('search', {
@@ -22,19 +22,19 @@ main.config(function($stateProvider, $urlRouterProvider) {
     .state('home', {
       url: "/home",
       views: {
-        "main": {templateUrl: "../template/home.html"}
+        "mains": {templateUrl: "../template/home.html"}
       }
     })
     .state('setting', {
       url: "/setting",
       views: {
-        "main": {templateUrl: "../template/setting.html"}
+        "mains": {templateUrl: "../template/setting.html"}
       }
     })
     .state('search', {
       url: "/search",
       views: {
-        "main": {templateUrl: "../template/search.html"}
+        "mains": {templateUrl: "../template/search.html"}
       }
     })
     // .state('state2', {

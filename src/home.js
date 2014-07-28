@@ -1,11 +1,14 @@
-angular.module('main.home', ['ui.router'])
-.config( ['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
+angular.module('main.home', ['app.service', 'ui.router'])
+.config( ['$stateProvider', '$urlRouterProvider', 'unicornLauncherProvider', 
+  function($stateProvider, $urlRouterProvider, unicornLauncherProvider) {
   var start = "asdasd";
   $stateProvider
     .state('home.apps',{
       url: '/:app',
       views: {
         "home": {templateUrl: function($stateParams) {
+          //var kkk = AppManage.getAppList();
+          unicornLauncherProvider.useTinfoilShielding(true);
           return "../template/home." + $stateParams.app + ".html"
         }}
       }
