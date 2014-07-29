@@ -1,1 +1,21 @@
 <h1>setting page</h1>
+<div ng-controller='mysetting'>
+  <table class="table">
+    <thead>
+    <tr>
+      <th>AppName</th>
+      <th>Description</th>
+      <th>Operation</i></a></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="app in appList">
+      <td>{{app.name}}</td>
+      <td>{{app.description}}</td>
+      <td>
+        <button ng-click="opera(app.name)" class="btn btn-success">{{app.state}}</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

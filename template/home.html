@@ -1,10 +1,8 @@
-<div class="container">
+<div class="container" ng-controller="myhome">
   <div class="col-lg-1">
     <ul>
-      <il><a ui-sref="home.apps({app:'app1'})">app1</a></il>
-      <il><a ui-sref="home.apps({app:'app2'})">app2</a></il>
-      <il><a ui-sref="home.apps({app:'app3'})">app3</a></il>
-      <il><a ui-sref="home.apps({app:'app5'})">app5(not installed)</a></il>
+      <il ng-repeat="app in appList">
+        <a ui-sref="home.apps({app:app.name})">{{app.name}}</a></il>
     </ul>
   </div>
   <div class="col-lg-11">

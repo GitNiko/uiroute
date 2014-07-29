@@ -1,4 +1,4 @@
-var main = angular.module('main', ['main.home','ui.router']);
+var main = angular.module('main', ['main.home', 'main.setting', 'ui.router']);
 
 main.config(function($stateProvider, $urlRouterProvider) {
   // 在浏览器中输入其他地址时候如果没有匹配的就转到state1，相当于默认路径
