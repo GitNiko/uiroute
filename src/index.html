@@ -3,10 +3,24 @@
 <script src="../lib/angular/angular.js"></script>
 <script src="../lib/angular-ui-router/release/angular-ui-router.js"></script>
 <script src="index.js"></script>
+<script src="app_service.js"></script>
+<script src="home.js"></script>
+<script src="setting.js"></script>
+<link href="../lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
 </head>
 <body>
-  <div ui-view></div>
-  <button ui-sref="state1">State 1</button>
-  <button ui-sref="state2">State 2</button>
+  <!-- navibar -->
+  <div>
+    <a ui-sref="home">home</a><span>|</span>
+    <a ui-sref="setting">setting</a><span>|</span>
+    <a ui-sref="search">search</a><span>|</span>
+  </div>
+  <hr/>
+  <div ui-view="mains"></div>
+<!--   <div ui-view="setting"></div>
+  <div ui-view="search"></div> -->
+  <!-- <div ui-view="viewB"></div>
+  <button ui-sref="route1">Route 1</button>
+  <button ui-sref="route2">Route 2</button> -->
 </body>
 </html>

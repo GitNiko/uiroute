@@ -1,0 +1,11 @@
+<div class="container" ng-controller="myhome">
+  <div class="col-lg-1">
+    <ul>
+      <il ng-repeat="app in appList">
+        <a ui-sref="home.apps({app:app.name})">{{app.name}}</a></il>
+    </ul>
+  </div>
+  <div class="col-lg-11">
+    <div ui-view="home"></div>
+  </div>
+</div>
