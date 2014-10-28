@@ -1,6 +1,10 @@
 #利用angular-ui/ui-router实现嵌套路由
+##如何设置默认的路由状态,2014-10-29
+```js
+$urlRouterProvider.when('/parent/index', '/parent/default');
+```
 ##尝试使用$stateChangeStart来拦截路由变化，2014-07-29
-通过侦听`ui-router`的`$stateChangeStart`事件来过滤路由：
+通过侦听`ui-router`的`$stateChangeStart`事件来过滤由：
 ```js
 controller('myhome', ['$rootScope', '$scope', 'AppManage', function($rootScope, $scope, AppManage) {
   $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams){
